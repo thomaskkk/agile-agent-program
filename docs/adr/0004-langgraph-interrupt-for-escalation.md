@@ -1,0 +1,3 @@
+# LangGraph interrupt is the Escalation mechanism
+
+When the system cannot autonomously resolve a failure, the graph raises a native LangGraph interrupt rather than throwing an exception or enqueuing an external notification. We considered exception-based escalation (simpler) and async queue-based escalation (more operationally flexible), but the LangGraph interrupt was chosen because it keeps the Delivery Run's state persisted and resumable from the exact point of interruption — without any external queue infrastructure. A single interrupt handler node serves both the `escalate` Mitigation Route and Loop Guard threshold breaches, so resume logic is not duplicated. In development, an auto-approve stub bypasses the interrupt without changing the graph structure.
