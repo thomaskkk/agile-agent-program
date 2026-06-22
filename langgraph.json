@@ -1,0 +1,8 @@
+{
+  "dependencies": ["."],
+  "graphs": {
+    "program_layer": "./src/program_layer/graph.py:make_graph"
+  },
+  "env": ".env",
+  "python_version": "3.12"
+}

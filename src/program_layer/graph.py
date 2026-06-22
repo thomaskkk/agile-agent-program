@@ -1,6 +1,7 @@
 """Program Layer LangGraph graph assembly."""
 from __future__ import annotations
 
+import asyncio
 import sqlite3
 
 from langgraph.checkpoint.sqlite import SqliteSaver
@@ -98,3 +99,7 @@ def build_graph(checkpoint_db_path: str | None = None) -> CompiledStateGraph:
     checkpointer.setup()
 
     return builder.compile(checkpointer=checkpointer)
+
+
+async def make_graph() -> CompiledStateGraph:
+    return await asyncio.to_thread(build_graph)
