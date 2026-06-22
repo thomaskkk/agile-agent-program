@@ -161,14 +161,15 @@ src/program_layer/
 tests/                     # Full graph + per-agent tests
 docs/
 ├── PRD.md                 # Product requirements for this layer
+├── adr/                   # Architecture Decision Records
 └── agents/                # Agent skill configuration docs
-UBIQUITOUS_LANGUAGE.md     # Canonical domain glossary
-layout.md                  # Architecture diagram source
+CONTEXT.md                 # Canonical domain glossary and project context
+AGENTS.md                  # Conventions for AI agents working in this repo
 ```
 
 ## Key Documents
 
 - [docs/PRD.md](docs/PRD.md) — full product requirements, user stories, and implementation decisions
-- [UBIQUITOUS_LANGUAGE.md](UBIQUITOUS_LANGUAGE.md) — canonical domain glossary; use these terms in code, issues, and discussions
-- [layout.md](layout.md) — architecture diagram source (Mermaid)
+- [CONTEXT.md](CONTEXT.md) — canonical domain glossary and project context; use these terms in code, issues, and discussions
+- [docs/adr/](docs/adr/) — Architecture Decision Records
 - [AGENTS.md](AGENTS.md) — conventions for AI agents working in this repo
